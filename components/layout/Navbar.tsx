@@ -69,7 +69,7 @@ export default function Navbar() {
             }}
             className="text-lg font-bold tracking-tight text-white"
           >
-            Davin<span className="text-primary">.</span>
+            RiskyDN<span className="text-primary">.</span>
           </a>
 
           <ul className="hidden md:flex items-center gap-1">
