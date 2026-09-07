@@ -1,21 +1,21 @@
 import { Certificate, Project, Skill, TimelineItem } from "./types";
 
 export const profile = {
-  name: "Davin Yoga Ardiyansyah",
-  title: "Information Systems Student",
-  university: "Universitas Islam Negeri Sunan Ampel Surabaya",
-  universityShort: "UINSA Surabaya",
+  name: "Risky Dwi Nugroho",
+  title: "IT Engineer",
+  school: "SMKN 1 GERIH",
+  universityShort: "SKANSAGER",
   start: "2026 - Present",
-  background: "SMK Rajasa Surabaya",
-  major: "Teknik Komputer dan Jaringan",
-  email: "davinyoga.dev@gmail.com",
+  background: "SMK NEGERI 1 GERIH",
+  major: "Teknik Kendaraan Ringan Otomotif",
+  email: "riskydwin26@gmail.com",
   github: "https://github.com/davinyoga",
   linkedin: "https://linkedin.com/in/davinyoga",
   cvUrl: "/cv/Davin-Yoga-Ardiyansyah-CV.pdf",
   heroDescription:
-    "Mahasiswa Sistem Informasi Universitas Islam Negeri Sunan Ampel Surabaya dengan latar belakang Teknik Komputer dan Jaringan yang memiliki minat dalam pengembangan aplikasi, artificial intelligence, web development, dan teknologi digital.",
+    "Lulusan SMK Teknik Kendaraan Ringan Otomotif dengan nilai memuaskan dan pengalaman magang di bengkel resmi. Memiliki keahlian dalam perawatan, perbaikan mesin, serta belajar Secara otodidak pada bidang Pemrograman website sejak 2023.",
   aboutDescription:
-    "Saya adalah mahasiswa Sistem Informasi Universitas Islam Negeri Sunan Ampel Surabaya dengan latar belakang Teknik Komputer dan Jaringan. Saya memiliki ketertarikan dalam membangun aplikasi digital, mengeksplorasi AI, dan menciptakan solusi teknologi dengan pengalaman pengguna yang baik.",
+    "Saya adalah alumni lulusan SMK 1 GERIH dengan latar belakang Teknik Kendaraan Ringan otomotif. Saya memiliki ketertarikan dalam membangun aplikasi digital, mengeksplorasi AI, dan menciptakan solusi teknologi dengan pengalaman pengguna yang baik.",
   interests: [
     "Software Development",
     "Web Development",
