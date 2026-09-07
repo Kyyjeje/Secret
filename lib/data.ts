@@ -3,7 +3,7 @@ import { Certificate, Project, Skill, TimelineItem } from "./types";
 export const profile = {
   name: "Risky Dwi Nugroho",
   title: "IT Engineer",
-  school: "SMKN 1 GERIH",
+  university: "SMKN 1 GERIH",
   universityShort: "SKANSAGER",
   start: "2026 - Present",
   background: "SMK NEGERI 1 GERIH",
