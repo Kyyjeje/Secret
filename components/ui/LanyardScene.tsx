@@ -157,20 +157,22 @@ useEffect(() => {
             }
           >
             {/* Card body */}
-<mesh geometry={nodes.card.geometry} material={materials.base} />
+{/* Base card */}
+<mesh
+  geometry={nodes.card.geometry}
+  material={materials.base}
 />
 
-{/* Profile photo */}
-<mesh position={[0.16, 0.18, 0.025]}>
-  <planeGeometry args={[0.48, 0.62]} />
+{/* Full ID Card image */}
+<mesh
+  position={[0, 0, 0.025]}
+  rotation={[0, 0, 0]}
+>
+  <planeGeometry args={[1.6, 2.25]} />
 
-  <meshPhysicalMaterial
+  <meshBasicMaterial
     map={photoTexture}
-    map-anisotropy={16}
-    clearcoat={1}
-    clearcoatRoughness={0.15}
-    roughness={0.35}
-    metalness={0.05}
+    toneMapped={false}
   />
 </mesh>
 
