@@ -54,7 +54,12 @@ function Band({ maxSpeed = 50, minSpeed = 10, photoSrc }) {
   const segmentProps = { type: "dynamic", canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
   const { nodes, materials } = useGLTF(GLTF_PATH);
   const bandTexture = useTexture(BAND_TEXTURE_PATH);
-  const photoTexture = useTexture(photoSrc);
+const photoTexture = useTexture(photoSrc);
+
+useEffect(() => {
+  photoTexture.center.set(0.5, 0.5);
+  photoTexture.rotation = Math.PI;
+}, [photoTexture]);
   const { width, height } = useThree((state) => state.size);
   const [curve] = useState(
     () =>
