@@ -18,7 +18,7 @@ export default function LanyardCard() {
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-      className="relative z-0 mx-auto flex h-[480px] w-full max-w-[420px] items-center justify-center -ml-6 sm:h-[560px] sm:max-w-[520px] sm:-ml-16 lg:h-[640px] lg:max-w-[640px] lg:-ml-40"
+       className="relative z-0 mx-auto flex h-[480px] w-full max-w-[420px] items-center justify-center -ml-6 sm:h-[560px] sm:max-w-[520px] sm:-ml-16 lg:h-[640px] lg:max-w-[640px] lg:-ml-40"
     >
       {/* Ambient glow behind the 3D scene */}
       <motion.div
