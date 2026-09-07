@@ -157,9 +157,7 @@ useEffect(() => {
             }
           >
             {/* Card body */}
-<mesh
-  geometry={nodes.card.geometry}
-  material={materials.base}
+<mesh geometry={nodes.card.geometry} material={materials.base} />
 />
 
 {/* Profile photo */}
