@@ -58,7 +58,15 @@ const photoTexture = useTexture(photoSrc);
 
 useEffect(() => {
   photoTexture.center.set(0.5, 0.5);
-  photoTexture.rotation = Math.PI;
+  photoTexture.rotation = 0;
+
+  photoTexture.wrapS = THREE.ClampToEdgeWrapping;
+  photoTexture.wrapT = THREE.ClampToEdgeWrapping;
+
+  photoTexture.repeat.set(1, 1);
+  photoTexture.offset.set(0, 0);
+
+  photoTexture.needsUpdate = true;
 }, [photoTexture]);
   const { width, height } = useThree((state) => state.size);
   const [curve] = useState(
@@ -148,17 +156,38 @@ useEffect(() => {
               drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))
             }
           >
-            {/* Card face — shows only the profile photo, per request */}
-            <mesh geometry={nodes.card.geometry}>
-              <meshPhysicalMaterial
-                map={photoTexture}
-                map-anisotropy={16}
-                clearcoat={1}
-                clearcoatRoughness={0.15}
-                roughness={0.3}
-                metalness={0.4}
-              />
-            </mesh>
+            {/* Card body */}
+<mesh
+  geometry={nodes.card.geometry}
+  material={materials.base}
+/>
+
+{/* Profile photo */}
+<mesh position={[0.16, 0.18, 0.025]}>
+  <planeGeometry args={[0.48, 0.62]} />
+
+  <meshPhysicalMaterial
+    map={photoTexture}
+    map-anisotropy={16}
+    clearcoat={1}
+    clearcoatRoughness={0.15}
+    roughness={0.35}
+    metalness={0.05}
+  />
+</mesh>
+
+{/* Metal clip */}
+<mesh
+  geometry={nodes.clip.geometry}
+  material={materials.metal}
+  material-roughness={0.3}
+/>
+
+{/* Clamp */}
+<mesh
+  geometry={nodes.clamp.geometry}
+  material={materials.metal}
+/>
             <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
             <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
           </group>
