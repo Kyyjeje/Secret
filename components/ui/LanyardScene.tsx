@@ -57,14 +57,12 @@ function Band({ maxSpeed = 50, minSpeed = 10, photoSrc }) {
 const photoTexture = useTexture(photoSrc);
 
 useEffect(() => {
-  photoTexture.center.set(0.5, 0.5);
-  photoTexture.rotation = 0;
+  photoTexture.colorSpace = THREE.SRGBColorSpace;
 
-  photoTexture.wrapS = THREE.ClampToEdgeWrapping;
-  photoTexture.wrapT = THREE.ClampToEdgeWrapping;
-
-  photoTexture.repeat.set(1, 1);
-  photoTexture.offset.set(0, 0);
+  photoTexture.anisotropy = 16;
+  photoTexture.minFilter = THREE.LinearMipmapLinearFilter;
+  photoTexture.magFilter = THREE.LinearFilter;
+  photoTexture.generateMipmaps = true;
 
   photoTexture.needsUpdate = true;
 }, [photoTexture]);
